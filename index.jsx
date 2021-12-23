@@ -467,7 +467,7 @@ if (iconUnHeart2) {
     iconHeart2.addEventListener('click', () =>{
         iconUnHeartLink2.classList.add('active')
         iconHeartLink2.classList.remove('active')
-        header.style.zIndex = 1
+        header.style.zIndex = 2
     })
 }
 
@@ -490,4 +490,30 @@ if (iconUnMess1) {
     })
 }
 
+
+// story--next / pre in pc
+const storyPre = $('.story--pre')
+const storyNext = $('.story--next')
+const story = $('.story__list')
+const storyCover = $('.story__list-border')
+const storyItem = $$('.story__item')[0]
+if (storyCover){
+    // story.style.width = `${storyItem.offsetWidth * story.children.length}px`
+
+    const storyWidth = story.offsetWidth
+    const storyCoverWidth = storyCover.offsetWidth
+    var sizeMinus = storyWidth - storyCoverWidth
+
+    story.style.transition = 'transform 0.3s ease-in-out'
+    storyNext.addEventListener('click', (e) => {
+        if (sizeMinus > 0 && sizeMinus < storyCoverWidth) {
+            story.style.transform = 'translateX(' + (-sizeMinus) +'px)'
+        }
+    })
+    storyPre.addEventListener('click', (e) => {
+        if (sizeMinus > 0 && sizeMinus < storyCoverWidth ) {
+            story.style.transform = 'translateX(0)'
+        }
+    })
+}
 
