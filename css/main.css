@@ -1074,16 +1074,18 @@ span.user__time {
     }
     .fa-chevron-circle-right.image-next {
         right: 0;
-        width: 25%;
-        height: 50%;
+        width: 20%;
+        height: 45%;
+        top: 20%;
         background-color: transparent;
         color: transparent;
         z-index: 2;
     }
     .fas.fa-chevron-circle-left.image-pre {
         left: 0;
-        width: 25%;
-        height: 50%;
+        width: 20%;
+        height: 45%;
+        top: 20%;
         background-color: transparent;
         color: transparent;
         z-index: 2;
