@@ -407,7 +407,15 @@ if (row){
             {
                 name: 'Milly' ,
                 path: './asset/img/102.jpg'
-            }
+            },
+            {
+                name: 'Milly' ,
+                path: './asset/img/103.jpg'
+            },
+            {
+                name: 'Milly' ,
+                path: './asset/img/104.jpg'
+            },
         ],
         render: function(){
             const html = this.imags.map((img, index) => {
